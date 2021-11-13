@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2 style="color:blue;font-size:24;text-align: center;"> Sentiment Based Product Recommendation System </h2>
+		
+		</div>
+	</header>
+	<p style="color:blue;font-size:22;text-align: center;"><b>Recommended Products to the user </b></p>
+	<div class="results">
+	{% for item in prediction %}
+    	<tr>
+      		<br> <td> <b> {{item}} </b> </td> </br>
+    	</tr>
+	{% endfor %}
+	</div>
+</body>
+</html>
